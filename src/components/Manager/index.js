@@ -13,7 +13,10 @@ const Manager = () => {
       <h4>
         Step {step + 1}/{steps.length}
       </h4>
-      <div className="steps-content">{steps[`${step}`].content}</div>
+      <div className="steps-content">
+        <h1>Crea tu password manager</h1>
+        {steps[`${step}`].content}
+      </div>
     </div>
   )
 }

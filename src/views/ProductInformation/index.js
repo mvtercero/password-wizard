@@ -14,9 +14,10 @@ const Step1 = ({ step, setStep }) => {
     return (
       <div className="product-info">
         <div className="product-info__group">
+        <div className="product-info__group-images">
           <div className="product-info__group-detail">
           <div className="product-info__group-img">
-            <img  src={head} alt="cabeza pensando"></img>
+            <img src={head} alt="cabeza pensando"></img>
           </div>
           <p>Guarda aquí tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas</p>
           </div>
@@ -35,15 +36,14 @@ const Step1 = ({ step, setStep }) => {
           <h4>Qué datos puedes guardar</h4>
           <p>Por ejemplo, el número de tu tarjeta, el PIN, el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro</p>
         </div>
-        <div className="step__check">
-            <label>
+        </div>
+        <div className="product-info__check">
               <input
                 type="checkbox"
                 checked={checked}
                 onChange={handleCheckbox}
               />
               Aceptas los términos y condiciones
-            </label>
           </div>
           <Button onClick={handleNext} type="submit" disabled={disabledButton}>Siguiente</Button>
       </div>
