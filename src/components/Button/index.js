@@ -2,10 +2,17 @@ import React from 'react'
 import './Button.css';
 import ButtonType from './ButtonType'
 
-const Button = ({ type, children,  onClick }) => {
+const Button = ({ type, children, disabled, onClick }) => {
   const buttonType = ButtonType[type] || type.default
- return (<button className={`btn btn--${buttonType}`} type={type} onClick={onClick}>
+ return (
+  <button
+    disabled={disabled}
+    className={!disabled ? `btn btn--${buttonType}` : `btn btn--disabled`}
+    type={type}
+    onClick={onClick}
+  >
     {children}
-  </button>)
+  </button>
+  )
 }
 export default Button

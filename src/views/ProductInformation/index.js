@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import Button from '../../components/Button'
 import head from './group.svg';
 import lock from './group-3.svg';
 import './ProductInformation.css';
 
-const Step1 = ({ step, setStep, user, setUser }) => {
-    const handleNext = (e) => {
-        e.preventDefault()
-        setStep(step + 1)
-    }
+const Step1 = ({ step, setStep }) => {
+  const [checked, setChecked] = useState(false)
+  const disabledButton = !checked
+  const handleCheckbox = () => setChecked((checked) => !checked)
+  const handleNext = () => {
+    setStep(step + 1)
+  }
     return (
       <div className="product-info">
         <div className="product-info__group">
@@ -33,9 +35,17 @@ const Step1 = ({ step, setStep, user, setUser }) => {
           <h4>Qué datos puedes guardar</h4>
           <p>Por ejemplo, el número de tu tarjeta, el PIN, el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro</p>
         </div>
-        <form onSubmit={handleNext}>
-          <Button type="submit">Siguiente</Button>
-        </form>
+        <div className="step__check">
+            <label>
+              <input
+                type="checkbox"
+                checked={checked}
+                onChange={handleCheckbox}
+              />
+              Aceptas los términos y condiciones
+            </label>
+          </div>
+          <Button onClick={handleNext} type="submit" disabled={disabledButton}>Siguiente</Button>
       </div>
     )
 }

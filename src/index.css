@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,11 +21,12 @@ Variables
 */
 
 :root {
-  --primary-color: #FF0049;
-  --secondary-color: #002B45;
-  --terciary-color: #FFF1E5;
-  --white: #FFFFFF;
-  --black:#000000;
+  --primary-color: #ff0049;
+  --secondary-color: #002b45;
+  --terciary-color: #fff1e5;
+  --white: #ffffff;
+  --black: #000000;
+  --gray-light: #c5c2bf;
   --xxl-size: 56px;
   --l-size: 20px;
   --m-size: 16px;
@@ -39,4 +40,3 @@ Variables
   --medium-weigth: 500;
   --normal-style: normal;
 }
-

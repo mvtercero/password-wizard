@@ -17,3 +17,9 @@
   background-color: var(--white);
   color: var(--secondary-color);
 }
+
+.btn--disabled {
+  color: var(--black);
+  background-color: var(--gray-light);
+  cursor: not-allowed;
+}
