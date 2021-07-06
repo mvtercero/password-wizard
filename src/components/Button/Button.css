@@ -1,0 +1,19 @@
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.btn--submit {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn--cancel {
+  background-color: var(--white);
+  color: var(--secondary-color);
+}
