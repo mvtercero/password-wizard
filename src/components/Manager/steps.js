@@ -14,11 +14,22 @@ const Steps = (step, setStep, password, setPassword) => [
   },
   {
     content: (
-      <Step2 setStep={setStep} step={step} password={password} setPassword={setPassword} />
+      <Step2
+        setStep={setStep}
+        step={step}
+        password={password}
+        setPassword={setPassword}
+      />
     ),
   },
   {
-    content: <Step3 password={password} />,
+    content: (
+      <Step3
+        setStep={setStep}
+        step={step}
+        password={password}
+      />
+    ),
   },
 ]
 export default Steps

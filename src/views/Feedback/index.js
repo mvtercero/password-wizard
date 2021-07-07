@@ -5,8 +5,7 @@ import SuccessModal from '../../components/SucessModal'
 import ErrorModal from '../../components/ErrorModal'
 import './Feedback.css';
 
-
-const Step3 = ({password}) => {
+const Step3 = ({ step, setStep, password}) => {
     const [showSuccessModal, setShowSuccessModal] = useState(false)
     const [showErrorModal, setshowErrorModal] = useState(false)
 
@@ -26,7 +25,7 @@ const Step3 = ({password}) => {
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div>
           <div className="feedback__buttons">
-              <Button type="cancel">
+              <Button onClick={() => setStep(step - 1)}  type="cancel">
               Cancelar
               </Button>
               <Button type="submit" onClick={handleSubmitForm}>
