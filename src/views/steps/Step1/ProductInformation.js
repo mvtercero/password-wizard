@@ -1,5 +1,5 @@
 import React, { useState }  from 'react'
-import Button from '../../components/Button'
+import Button from '../../../components/Button/Button'
 import head from './group.svg';
 import lock from './group-3.svg';
 import './ProductInformation.css';

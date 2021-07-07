@@ -1,7 +1,7 @@
 import React, { useReducer, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PasswordReducer, DefaultState } from './user-reducer'
-import Steps from './steps'
+import Steps from './Steps'
 import './Manager.css';
 
 const Manager = () => {

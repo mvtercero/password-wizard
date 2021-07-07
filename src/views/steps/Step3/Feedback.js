@@ -1,8 +1,8 @@
 import React, { useState }  from 'react'
-import Button from '../../components/Button'
-import { submitForm } from '../../services/api'
-import SuccessModal from '../../components/SucessModal'
-import ErrorModal from '../../components/ErrorModal'
+import Button from '../../../components/Button/Button'
+import { submitForm } from '../../../services/api'
+import SuccessModal from '../../../components/SucessModal'
+import ErrorModal from '../../../components/ErrorModal'
 import './Feedback.css';
 import { useTranslation } from 'react-i18next'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsCheck, BsExclamationTriangle} from "react-icons/bs";
-import Button from '../Button/index';
+import Button from '../Button/Button';
 import './Modal.css'
 
 const Modal = ({ type = 'success', buttonText, children }) => {

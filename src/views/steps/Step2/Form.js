@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Input from '../../components/Input'
-import Button from '../../components/Button'
+import Input from '../../../components/Input/Input'
+import Button from '../../../components/Button/Button'
 import { isValidPassword } from './validation'
 import './Form.css';
 import { useTranslation } from 'react-i18next'

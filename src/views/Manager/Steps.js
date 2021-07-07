@@ -1,7 +1,7 @@
 import React from 'react'
-import Step1 from "../../views/ProductInformation";
-import Step2 from "../../views/Form";
-import Step3 from "../../views/Feedback";
+import Step1 from "../steps/Step1/ProductInformation";
+import Step2 from "../steps/Step2/Form";
+import Step3 from "../steps/Step3/Feedback";
 
 const Steps = (step, setStep, password, setPassword) => [
   {
