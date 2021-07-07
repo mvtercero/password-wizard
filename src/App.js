@@ -1,12 +1,12 @@
 import React from 'react'
-import Layout from './components/Layout'
 import Manager from './components/Manager'
+import './App.css'
 
 function App() {
   return (
-    <Layout>
+    <div className="app">
      <Manager/>
-    </Layout>
+    </div>
   )
 }
 

@@ -28,16 +28,9 @@ Variables
   --black: #000000;
   --gray-light: #c5c2bf;
   --danger: #ff0000;
-  --xxl-size: 56px;
+  --xl-size: 24px;
   --l-size: 20px;
   --m-size: 16px;
   --s-size: 12px;
   --xs-size: 10px;
-  --xxl-line-height: 72px;
-  --m-line-height: 24px;
-  --s-line-height: 20px;
-  --xs-line-height: 16px;
-  --regular-weigth: 400;
-  --medium-weigth: 500;
-  --normal-style: normal;
 }

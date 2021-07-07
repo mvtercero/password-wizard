@@ -9,12 +9,12 @@ const Manager = () => {
   let steps = Steps(step, setStep, password, setPassword)
 
   return (
-    <div>
+    <div className="manager">
       <h4>
         Step {step + 1}/{steps.length}
       </h4>
-      <div className="steps-content">
-        <h1>Crea tu password manager</h1>
+      <div>
+        <h1 className="manager__title">Crea tu password manager</h1>
         {steps[`${step}`].content}
       </div>
     </div>
