@@ -9,3 +9,10 @@
   padding-left: 60px;
   font-size: var(--xl-size);
 }
+
+.manager__title-line {
+  width: 40px;
+  height: 5px;
+  margin: 8px 0 0 60px;
+  background-color: #3fc2df;
+}

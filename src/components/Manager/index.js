@@ -15,6 +15,7 @@ const Manager = () => {
       </h4>
       <div>
         <h1 className="manager__title">Crea tu password manager</h1>
+        <div className="manager__title-line"></div>
         {steps[`${step}`].content}
       </div>
     </div>
