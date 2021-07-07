@@ -4,37 +4,44 @@ import { submitForm } from '../../services/api'
 import SuccessModal from '../../components/SucessModal'
 import ErrorModal from '../../components/ErrorModal'
 import './Feedback.css';
+import { useTranslation } from 'react-i18next'
 
 const Step3 = ({ step, setStep, password}) => {
-    const [showSuccessModal, setShowSuccessModal] = useState(false)
-    const [showErrorModal, setshowErrorModal] = useState(false)
+  const { t } = useTranslation()
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [showErrorModal, setshowErrorModal] = useState(false)
 
-    const handleSubmitForm = async () => {
-        const { password1, password2, clue } = password
-        try {
-          const { status } = await submitForm(password1, password2, clue)
-          status === 200 ? setShowSuccessModal(true) : setshowErrorModal(true)
-        } catch (error) {
-          setshowErrorModal(true)
-        }
-    }
+  const handleSubmitForm = async () => {
+      const { password1, password2, clue } = password
+      try {
+        const { status } = await submitForm(password1, password2, clue)
+        status === 200 ? setShowSuccessModal(true) : setshowErrorModal(true)
+      } catch (error) {
+        setshowErrorModal(true)
+      }
+  }
     return (
-        <>
-          <div className="feedback">
-            <h2>Título paso 3</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          </div>
-          <div className="feedback__buttons">
-              <Button onClick={() => setStep(step - 1)}  type="button">
-              Cancelar
-              </Button>
-              <Button type="submit" onClick={handleSubmitForm}>
-              Enviar
+      <>
+        <div className="feedback">
+          <h2>{t('feedback.title')}</h2>
+          <p>{t('feedback.text')}</p>
+        </div>
+        <div className="feedback__buttons">
+          <Button
+            onClick={() => setStep(step - 1)}
+            type="button">
+            {t('button.cancel')}
           </Button>
-          </div>
-          {showSuccessModal && <SuccessModal />}
-          {showErrorModal && <ErrorModal />}
-        </>
-)}
+          <Button
+            type="submit"
+            onClick={handleSubmitForm}>
+            {t('button.send')}
+          </Button>
+        </div>
+        {showSuccessModal && <SuccessModal />}
+        {showErrorModal && <ErrorModal />}
+      </>
+    )
+  }
 
 export default Step3;
