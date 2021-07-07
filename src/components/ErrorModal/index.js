@@ -1,12 +1,14 @@
 import React from 'react'
 import Modal from '../Modal'
+import { useTranslation } from 'react-i18next'
 
 const ErrorModal = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <Modal type="error" buttonText="Volver a password manager">
-        <h2>Ha habido un error</h2>
-        <div>no hemos podido modificar tu Contraseña Maestra</div>
+      <Modal type="error" buttonText={t('errorModal.buttonText')}>
+        <h2>{t('errorModal.title')}</h2>
+        <div>{t('errorModal.text')}</div>
       </Modal>
     </>
   )

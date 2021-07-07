@@ -1,12 +1,14 @@
 import React from 'react'
 import Modal from '../Modal'
+import { useTranslation } from 'react-i18next'
 
 const SuccessModal = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <Modal type="success" buttonText="Acceder">
-        <h2>¡Tu password manager ya está creado!</h2>
-        <div>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones</div>
+      <Modal type="success" buttonText={t('sucessModal.buttonText')}>
+        <h2>{t('sucessModal.title')}</h2>
+        <div>{t('sucessModal.text')}</div>
       </Modal>
     </>
   )

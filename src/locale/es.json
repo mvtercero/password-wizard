@@ -44,5 +44,15 @@
     "next": "Siguiente",
     "cancel": "Cancelar",
     "send": "Enviar"
+  },
+  "errorModal": {
+    "buttonText": "Volver a password manager",
+    "title": "Ha habido un error",
+    "text": "no hemos podido modificar tu Contraseña Maestra"
+  },
+  "sucessModal": {
+    "buttonText": "Acceder",
+    "title": "¡Tu password manager ya está creado!",
+    "text": "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones"
   }
 }
