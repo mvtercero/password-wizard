@@ -18,6 +18,24 @@
     "terms&conditions": "Acepto los términos y condiciones"
 
   },
+  "form": {
+    "text1": "Guarda aquí tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas",
+
+    "inputPassword": {
+      "label": "Crea tu contraseña maestra",
+      "placeholder": "Teclea tu contraseña"
+    },
+    "inputPassword2": {
+      "label": "Repite tu contraseña maestra",
+      "placeholder": "Repite tu contraseña"
+    },
+    "text2": "También puedes crear una pista que te ayude a recordar tu contraseña maestra",
+    "inputClue": {
+      "label": "Crea tu pista para recordar tu contraseña (Opcional)",
+      "placeholder": "Introduce tu pista"
+    }
+  },
+
   "button": {
     "next": "Siguiente",
     "cancel": "Cancelar"
