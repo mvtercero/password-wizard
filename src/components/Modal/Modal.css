@@ -1,0 +1,23 @@
+@import "../../styles/base.scss";
+
+.modal {
+  width: 700px;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.modal__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 60px;
+  border-top: 2px solid var(--gray-light);
+}
+.modal__content {
+  margin-left: 20px;
+}
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 60px;
+  border-top: 2px solid var(--gray-light);
+}

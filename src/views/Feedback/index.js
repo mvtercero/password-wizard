@@ -1,12 +1,40 @@
-import React, {Component} from "react";
+import React, { useState }  from 'react'
+import Button from '../../components/Button'
+import { submitForm } from '../../services/api'
+import SuccessModal from '../../components/SucessModal'
+import ErrorModal from '../../components/ErrorModal'
 
-import success from './success.png';
-import error from './error.png'
 
-class Step3 extends Component {
-    render() {
-        return <img src={this.props.success ? success : error}/>
+const Step3 = ({password}) => {
+    const [showSuccessModal, setShowSuccessModal] = useState(false)
+    const [showErrorModal, setshowErrorModal] = useState(false)
+
+    const handleSubmitForm = async () => {
+        const { password1, password2, clue } = password
+        try {
+          const { status } = await submitForm(password1, password2, clue)
+          status === 200 ? setShowSuccessModal(true) : setshowErrorModal(true)
+        } catch (error) {
+          setshowErrorModal(true)
+        }
     }
-}
+
+
+    return (
+        <div>
+            <h2>Título paso 3</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div className="wizard__footer">
+                <Button type="cancel">
+                Cancelar
+                </Button>
+                <Button type="submit" onClick={handleSubmitForm}>
+                Enviar
+            </Button>
+            </div>
+            {showSuccessModal && <SuccessModal />}
+            {showErrorModal && <ErrorModal />}
+        </div>
+)}
 
 export default Step3;

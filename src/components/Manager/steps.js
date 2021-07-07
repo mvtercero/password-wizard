@@ -18,7 +18,7 @@ const Steps = (step, setStep, password, setPassword) => [
     ),
   },
   {
-    content: <Step3 setStep={setStep} step={step} />,
+    content: <Step3 password={password} />,
   },
 ]
 export default Steps
