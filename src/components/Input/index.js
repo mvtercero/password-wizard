@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Input.css';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 
-const Input = ({ label, name, value, onChange, error }) => {
+const Input = ({ label, name, value, onChange, error, placeholder }) => {
 
   const [isPasswordShow, setIsPasswordShow] = useState(false)
   const handleClick = () => setIsPasswordShow((showed) => !showed)
@@ -18,6 +18,7 @@ const Input = ({ label, name, value, onChange, error }) => {
         }
         name={name}
         value={value}
+        placeholder={placeholder}
         onChange={onChange}
       />
       {
@@ -27,6 +28,13 @@ const Input = ({ label, name, value, onChange, error }) => {
             : <BsEyeSlash size={20} onClick={handleClick} />
         ) :
         <></>
+      }
+      {
+        name === 'clue' ? (
+          <span className="input__total-value">{`${value.length}/60`}</span>
+        ) : (
+          <></>
+        )
       }
       {error && (
         <div>

@@ -14,12 +14,21 @@
 .input {
   outline: none;
   height: 35px;
-  border: 1px solid red;
+  font-size: var(--m-size);
+  border: 1px solid var(--gray-light);
+  padding: 8px;
 }
 
 .input__img {
   width: 30px;
   border: 1px solid red;
+}
+
+.input__total-value {
+  font-size: var(--m-size);
+  color: var(--gray-light);
+  margin-top: 8px;
+  place-self: flex-end;
 }
 
 span {
