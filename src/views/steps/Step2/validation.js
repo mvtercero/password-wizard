@@ -1,12 +1,17 @@
 export const isValidPassword = (values) => {
   let errors = {}
-  // const regex= /^(?=\w*\d)(?=\w*[A-Z])$/
+  const numRegex= /.*[0-9].*/
+  const mayusRegex= /[A-Z]/
+
   if (!values.password1) {
     errors.password1 = 'La contraseña maestra es necesaria'
   }
-  // if(!regex.test(values.password1)) {
-  //   errors.password1 = 'La contraseña debe tener un número y una mayúscula'
-  // }
+  if(!numRegex.test(values.password1)) {
+    errors.password1 = 'La contraseña debe tener un número'
+  }
+  if(!mayusRegex.test(values.password1)) {
+    errors.password1 = 'La contraseña debe tener una mayúscula'
+  }
   if (!values.password2) {
     errors.password2 = 'Debes repetir la contraseña'
   }
