@@ -11,6 +11,7 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
       type: 'SET_PASSWORD',
       payload: { [target.name]: target.value },
     })
+    setErrors(errors)
   }
   const handleNext = (e) => {
     e.preventDefault()

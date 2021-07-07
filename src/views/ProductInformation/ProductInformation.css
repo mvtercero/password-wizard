@@ -34,7 +34,19 @@
 }
 
 .product-info__check {
+  display: flex;
+  align-items: center;
+}
+
+.product-info__terms-conditions {
+  margin-right: 8px;
+}
+
+.product__buttons {
   margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 h4 {

@@ -37,15 +37,30 @@ const Step1 = ({ step, setStep }) => {
           <p>Por ejemplo, el número de tu tarjeta, el PIN, el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro</p>
         </div>
         </div>
-        <div className="product-info__check">
+
+          <div className="product__buttons">
+            <Button
+              type="button"
+            >
+              Cancelar
+            </Button>
+            <div className="product-info__check">
+            <div className="product-info__terms-conditions">
               <input
                 type="checkbox"
                 checked={checked}
                 onChange={handleCheckbox}
               />
               Aceptas los términos y condiciones
+            </div>
+            <Button
+              onClick={handleNext} type="submit"
+              disabled={disabledButton}
+            >
+              Siguiente
+            </Button>
+            </div>
           </div>
-          <Button onClick={handleNext} type="submit" disabled={disabledButton}>Siguiente</Button>
       </div>
     )
 }
