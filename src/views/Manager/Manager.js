@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PasswordReducer, DefaultState } from './user-reducer'
+import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import Steps from './Steps'
 import './Manager.css';
 
@@ -12,9 +13,17 @@ const Manager = () => {
 
   return (
     <div className="manager">
-      <h4>
-        Step {step + 1}/{steps.length}
-      </h4>
+      <div className="header">
+      {steps.map((item, index) => {
+        return (
+          <div
+            key={index}
+          >
+           <div className="circulo"> {index < step ? <IoCheckmarkCircleSharp size={40}/>  : index + 1} </div>
+          </div>
+        )
+      })}
+      </div>
       <div>
         <h1 className="manager__title">{t('title')}</h1>
         <div className="manager__title-line"></div>

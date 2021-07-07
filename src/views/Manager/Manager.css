@@ -16,3 +16,24 @@
   margin: 8px 0 0 60px;
   background-color: var(--aqua);
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--gray-light);
+  padding: 20px 0;
+}
+
+.circulo {
+  color: var(--white);
+  background-color: var(--secondary-color);
+  font-size: var(--l-size);
+  border-radius: 50%;
+  font-size: var(--l-size);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
