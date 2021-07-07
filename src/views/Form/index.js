@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import { isValidPassword } from './validation'
+import './Form.css';
 
 const Step2 = ({ step, setStep, password, setPassword }) => {
     const [errors, setErrors] = useState({})
@@ -19,9 +20,12 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
     setStep(step + 1)
   }
   return (
+    <>
+    <h2 className="form__text">En primer lugar, debes crear una contraseña diferente para tus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien.</h2>
     <form onSubmit={handleNext}>
+      <div className="form__group">
       <Input
-        type="text"
+        type="password"
         name="password1"
         value={password.password1}
         label="Crea tu contraseña maestra"
@@ -29,13 +33,16 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
         error={errors.password1}
       />
       <Input
-        type="text"
+        type="password"
         name="password2"
         value={password.password2}
         label="Repite tu contraseña maestra"
         onChange={(e) => handleSetPassword(e)}
         error={errors.password2}
       />
+      </div>
+      <div className="form__clue">
+        <h2 className="form__text">También puedes crear una pista que te ayude a recordar tu contraseña maestra</h2>
         <Input
         type="text"
         name="clue"
@@ -44,13 +51,15 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
         onChange={(e) => handleSetPassword(e)}
         error={errors.clue}
       />
-      <div>
+      </div>
+      <div className="form__buttons">
         <Button onClick={() => setStep(step - 1)} type="button">
           Cancelar
         </Button>
         <Button type="submit"> Siguiente</Button>
       </div>
     </form>
+    </>
   )
 }
 

@@ -1,0 +1,28 @@
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__label {
+  font-size: var(--m-size);
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.input {
+  outline: none;
+  height: 35px;
+  border: 1px solid red;
+}
+
+.input__img {
+  width: 30px;
+  border: 1px solid red;
+}
+
+span {
+  color: var(--danger);
+  font-size: var(--s-size);
+}
