@@ -3,13 +3,15 @@ import './Input.css';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 
 const Input = ({ label, name, value, onChange, error, placeholder }) => {
-
+  console.log(error, 'error')
   const [isPasswordShow, setIsPasswordShow] = useState(false)
   const handleClick = () => setIsPasswordShow((showed) => !showed)
 
   return (
-    <div className="input__wrapper">
+    <div>
       <label className="input__label">{label}</label>
+      <div className="input__wrapper">
+
       <input
         className="input"
         type={ name !== 'clue'
@@ -29,14 +31,8 @@ const Input = ({ label, name, value, onChange, error, placeholder }) => {
         ) :
         <></>
       }
-      {
-        name === 'clue' ? (
-          <span className="input__total-value">{`${value.length}/60`}</span>
-        ) : (
-          <></>
-        )
-      }
-      {error && (
+    </div>
+    {error && (
         <div>
           <span> {error}</span>
         </div>

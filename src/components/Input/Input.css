@@ -1,10 +1,14 @@
 .input__wrapper {
+  border: 1px solid var(--gray-light);
+  height: 35px;
+  margin-top: 8px;
+  padding: 2px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .input__label {
-  font-size: var(--m-size);
+  font-size: var(--s-size);
   margin-bottom: 8px;
   color: var(--secondary-color);
   font-weight: bold;
@@ -12,11 +16,9 @@
 }
 
 .input {
+  width: 80%;
+  border: none;
   outline: none;
-  height: 35px;
-  font-size: var(--m-size);
-  border: 1px solid var(--gray-light);
-  padding: 8px;
 }
 
 .input__img {
@@ -25,7 +27,7 @@
 }
 
 .input__total-value {
-  font-size: var(--m-size);
+  font-size: var(--s-size);
   color: var(--gray-light);
   margin-top: 8px;
   place-self: flex-end;
@@ -33,5 +35,5 @@
 
 span {
   color: var(--danger);
-  font-size: var(--s-size);
+  font-size: var(--xs-size);
 }
