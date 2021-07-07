@@ -12,13 +12,14 @@ const Step3 = ({ step, setStep, password}) => {
   const [showErrorModal, setshowErrorModal] = useState(false)
 
   const handleSubmitForm = async () => {
-      const { password1, password2, clue } = password
-      try {
-        const { status } = await submitForm(password1, password2, clue)
-        status === 200 ? setShowSuccessModal(true) : setshowErrorModal(true)
-      } catch (error) {
-        setshowErrorModal(true)
-      }
+    const { password1, password2, clue } = password
+    setStep(step)
+    try {
+      const { status } = await submitForm(password1, password2, clue)
+      status === 200 ? setShowSuccessModal(true) : setshowErrorModal(true)
+    } catch (error) {
+      setshowErrorModal(true)
+    }
   }
     return (
       <>
