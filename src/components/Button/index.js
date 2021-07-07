@@ -3,7 +3,7 @@ import './Button.css';
 import ButtonType from './ButtonType'
 
 const Button = ({ type, children, disabled, onClick }) => {
-  const buttonType = ButtonType[type] || type.default
+  const buttonType = ButtonType[type] || type.submit
  return (
   <button
     disabled={disabled}

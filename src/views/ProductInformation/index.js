@@ -55,7 +55,8 @@ const Step1 = ({ step, setStep }) => {
             <div className="product-info__check">
 
             <Button
-              onClick={handleNext} type="submit"
+              type="submit"
+              onClick={handleNext}
               disabled={disabledButton}
             >
               Siguiente

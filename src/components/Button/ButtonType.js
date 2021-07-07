@@ -1,6 +1,6 @@
 const ButtonType = {
   submit: 'submit',
-  cancel: 'text',
+  button: 'cancel',
 }
 
 export default ButtonType
