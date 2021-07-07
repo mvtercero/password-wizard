@@ -1,3 +1,25 @@
 {
+  "title": "Crea tu Password Manager",
+  "info": {
+    "image1": {
+      "text": "Guarda aquí tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas"
+    },
+    "image2": {
+      "text": "Guarda aquí tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas"
+    },
+    "paragraph1": {
+      "subtitle": "Como funciona",
+      "text": "En primer lugar, debes crear una contraseña diferente para sus pertenencias eletronicas. No podras recuperar tu contraseña, asi que recuerdala bien."
+    },
+    "paragraph2": {
+      "subtitle": "Que datos puedes guardar",
+      "text": "Por ejemplo, el numero de tu tarjeta, el PIN y el PUK de tu telefono movil, el numero de serie de alguno de tus dispositivos o cualquier informacion que necesites tener en lugar seguro."
+    },
+    "terms&conditions": "Acepto los términos y condiciones"
 
+  },
+  "button": {
+    "next": "Siguiente",
+    "cancel": "Cancelar"
+  }
 }
