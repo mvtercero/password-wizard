@@ -3,7 +3,6 @@ import './Input.css';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 
 const Input = ({ label, name, value, onChange, error, placeholder }) => {
-  console.log(error, 'error')
   const [isPasswordShow, setIsPasswordShow] = useState(false)
   const handleClick = () => setIsPasswordShow((showed) => !showed)
 
