@@ -19,8 +19,6 @@ const Step3 = ({password}) => {
           setshowErrorModal(true)
         }
     }
-
-
     return (
         <>
           <div className="feedback">

@@ -26,6 +26,6 @@
 .modal__footer {
   display: flex;
   justify-content: flex-end;
-  padding: 20px 60px;
+  padding: 10px 60px;
   border-top: 2px solid var(--gray-light);
 }
