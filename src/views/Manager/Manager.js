@@ -20,7 +20,7 @@ const Manager = () => {
       <div>
         <h1 className="manager__title">{t('title')}</h1>
         <div className="manager__title-line"></div>
-        {steps[`${step}`].content}
+        {steps[`${step}`].view}
       </div>
     </div>
   )

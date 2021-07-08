@@ -5,7 +5,7 @@ import Step3 from "../steps/Step3/Feedback";
 
 const Steps = (step, setStep, password, setPassword) => [
   {
-    content: (
+    view: (
       <Step1
         setStep={setStep}
         step={step}
@@ -13,7 +13,7 @@ const Steps = (step, setStep, password, setPassword) => [
     ),
   },
   {
-    content: (
+    view: (
       <Step2
         setStep={setStep}
         step={step}
@@ -23,7 +23,7 @@ const Steps = (step, setStep, password, setPassword) => [
     ),
   },
   {
-    content: (
+    view: (
       <Step3
         setStep={setStep}
         step={step}
