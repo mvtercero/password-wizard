@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './Input.css';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 
@@ -10,7 +11,6 @@ const Input = ({ label, name, value, onChange, error, placeholder }) => {
     <div>
       <label className="input__label">{label}</label>
       <div className="input__wrapper">
-
       <input
         className="input"
         type={ name !== 'clue'
@@ -39,4 +39,14 @@ const Input = ({ label, name, value, onChange, error, placeholder }) => {
     </div>
   )
 }
+
+Input.propTypes = {
+  label: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  error: PropTypes.string,
+}
+
 export default Input

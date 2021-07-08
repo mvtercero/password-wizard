@@ -1,4 +1,5 @@
 import React, { useState }  from 'react'
+import PropTypes from 'prop-types'
 import Button from '../../../components/Button/Button'
 import head from './group.svg';
 import lock from './group-3.svg';
@@ -18,17 +19,17 @@ const Step1 = ({ step, setStep }) => {
         <div className="product-info__group">
           <div className="product-info__group-images">
             <div className="product-info__group-detail">
-            <div>
-              <img src={head} alt="cabeza pensando"></img>
-            </div>
-            <p className="product-info__group-info">{t('info.image1.text')}</p>
+              <div>
+                <img src={head} alt="cabeza pensando"></img>
+              </div>
+              <p className="product-info__group-info">{t('info.image1.text')}</p>
             </div>
             <div className="product-info__group-detail">
               <div>
                 <img src={lock} alt="candado"></img>
               </div>
               <p className="product-info__group-info">{t('info.image2.text')}</p>
-              </div>
+            </div>
           </div>
           <div className="product-info__group-text">
             <h4 className="product-info__group-title">{t('info.paragraph1.subtitle')}</h4>
@@ -67,6 +68,11 @@ const Step1 = ({ step, setStep }) => {
           </div>
       </div>
     )
+}
+
+Step1.propTypes = {
+  step: PropTypes.number,
+  setStep: PropTypes.func,
 }
 
 export default Step1;

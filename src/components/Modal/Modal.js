@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { BsCheck, BsExclamationTriangle} from "react-icons/bs";
 import Button from '../Button/Button';
 import './Modal.css'
@@ -19,6 +20,12 @@ const Modal = ({ type = 'success', buttonText, children }) => {
       </div>
     </div>
   )
+}
+
+Modal.propTypes = {
+  type: PropTypes.string,
+  buttonText: PropTypes.string,
+  children: PropTypes.array,
 }
 
 export default Modal

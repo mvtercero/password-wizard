@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import Input from '../../../components/Input/Input'
 import Button from '../../../components/Button/Button'
 import { isValidPassword } from './validation'
@@ -82,5 +83,11 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
   )
 }
 
+Step2.propTypes = {
+  step: PropTypes.number,
+  setStep: PropTypes.func,
+  password: PropTypes.object,
+  setPassword: PropTypes.func,
+}
 
 export default Step2
