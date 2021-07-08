@@ -24,9 +24,8 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
     setStep(step + 1)
   }
   return (
-    <>
+    <div data-cy='step-2'>
       <h2 className="form__text-initial">{t('form.text1')}</h2>
-
       <form onSubmit={handleNext}>
         <div className="form">
           <div className="form__group">
@@ -79,7 +78,7 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
           </Button>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

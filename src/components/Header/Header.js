@@ -7,7 +7,7 @@ import './Header.css';
 const Header = ({step, steps}) => {
   return (
     <>
-      <div className="header">
+      <div data-cy='header' className="header">
         { steps.map((item, index) => {
           return (
             <div

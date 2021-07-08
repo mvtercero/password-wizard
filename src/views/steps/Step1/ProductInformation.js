@@ -15,7 +15,7 @@ const Step1 = ({ step, setStep }) => {
     setStep(step + 1)
   }
     return (
-      <div className="product-info">
+      <div data-cy='step-1' className="product-info">
         <div className="product-info__group">
           <div className="product-info__group-images">
             <div className="product-info__group-detail">
@@ -41,6 +41,7 @@ const Step1 = ({ step, setStep }) => {
           </div>
           <div className="product-info__terms-conditions">
             <input
+              data-cy='checkbox'
               type="checkbox"
               checked={checked}
               onChange={handleCheckbox}
@@ -55,8 +56,6 @@ const Step1 = ({ step, setStep }) => {
             >
               {t('button.cancel')}
             </Button>
-            <div className="product-info__check">
-
             <Button
               type="submit"
               onClick={handleNext}
@@ -64,7 +63,6 @@ const Step1 = ({ step, setStep }) => {
             >
               {t('button.next')}
             </Button>
-            </div>
           </div>
       </div>
     )

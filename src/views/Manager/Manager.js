@@ -12,16 +12,14 @@ const Manager = () => {
   let steps = Steps(step, setStep, password, setPassword)
 
   return (
-    <div className="manager">
-        <Header
-          steps={steps}
-          step={step}
-        ></Header>
-      <div>
-        <h1 className="manager__title">{t('title')}</h1>
-        <div className="manager__title-line"></div>
-        {steps[`${step}`].view}
-      </div>
+    <div data-cy='manager' className="manager">
+      <Header
+        steps={steps}
+        step={step}
+      ></Header>
+      <h1 className="manager__title">{t('title')}</h1>
+      <div className="manager__title-line"></div>
+      {steps[`${step}`].view}
     </div>
   )
 }
