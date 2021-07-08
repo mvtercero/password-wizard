@@ -20,10 +20,10 @@
   padding: 20px 60px;
   border-top: 2px solid var(--gray-light);
 }
-.modal__content {
+.modal__text {
   margin-left: 20px;
 }
-.modal__footer {
+.modal__button {
   display: flex;
   justify-content: flex-end;
   padding: 10px 60px;

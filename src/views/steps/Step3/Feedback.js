@@ -23,7 +23,7 @@ const Step3 = ({ step, setStep, password}) => {
     }
   }
   return (
-    <>
+    <div data-cy='step-3'>
       <div className="feedback">
         <h2>{t('feedback.title')}</h2>
         <p>{t('feedback.text')}</p>
@@ -42,7 +42,7 @@ const Step3 = ({ step, setStep, password}) => {
       </div>
       {showSuccessModal && <SuccessModal />}
       {showErrorModal && <ErrorModal />}
-    </>
+    </div>
   )
 }
 

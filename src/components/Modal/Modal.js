@@ -10,9 +10,9 @@ const Modal = ({ type = 'success', buttonText, children }) => {
       <div className="modal">
         <div className="modal__container">
           {type === 'success' ? <BsCheck size={72} /> : <BsExclamationTriangle size={72} />}
-          <div className="modal__content">{children}</div>
+          <div className="modal__text">{children}</div>
         </div>
-        <div className="modal__footer">
+        <div className="modal__button">
           <Button type="button">
             {buttonText}
           </Button>

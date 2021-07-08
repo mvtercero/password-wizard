@@ -36,4 +36,10 @@ describe("Form (step 2)", () => {
     cy.get('span.input__error').contains('La contraseña debe tener una mayúscula');
     cy.get('span.input__error').contains('Debes repetir la contraseña');
   })
+
+  it("should check if the user types the passwords well, can continue to step 3", () => {
+    cy.get('input[name="password1"]').type('123456789L{enter}')
+    cy.get('input[name="password2"]').type('123456789L{enter}')
+    cy.get('[data-cy=manager]').find('[data-cy=step-3]')
+  });
 });
