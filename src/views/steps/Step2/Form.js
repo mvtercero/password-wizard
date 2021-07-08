@@ -26,11 +26,12 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
   return (
     <div data-cy='step-2'>
       <h2 className="form__text-initial">{t('form.text1')}</h2>
-      <form onSubmit={handleNext}>
+      <form data-cy='form' onSubmit={handleNext}>
         <div className="form">
           <div className="form__group">
             <Input
               type="password"
+              id="password1"
               name="password1"
               value={password.password1}
               label={t('form.inputPassword.label')}
@@ -40,6 +41,7 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
             />
             <Input
               type="password"
+              id="password2"
               name="password2"
               value={password.password2}
               label={t('form.inputPassword2.label')}
@@ -53,6 +55,7 @@ const Step2 = ({ step, setStep, password, setPassword }) => {
             <div className="form__clue">
               <Input
                 type="text"
+                id="clue"
                 name="clue"
                 value={password.clue}
                 label={t('form.inputClue.label')}

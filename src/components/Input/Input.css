@@ -21,11 +21,6 @@
   outline: none;
 }
 
-.input__img {
-  width: 30px;
-  border: 1px solid red;
-}
-
 .input__total-value {
   font-size: var(--s-size);
   color: var(--gray-light);
@@ -33,7 +28,7 @@
   place-self: flex-end;
 }
 
-span {
+.input__error {
   color: var(--danger);
   font-size: var(--xs-size);
 }

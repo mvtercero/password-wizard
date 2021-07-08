@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import './Input.css';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 
-const Input = ({ label, name, value, onChange, error, placeholder }) => {
+const Input = ({ id, label, name, value, onChange, error, placeholder }) => {
   const [isPasswordShow, setIsPasswordShow] = useState(false)
   const handleClick = () => setIsPasswordShow((showed) => !showed)
 
   return (
-    <div>
+    <div data-cy={id}>
       <label className="input__label">{label}</label>
       <div className="input__wrapper">
       <input
@@ -33,7 +33,7 @@ const Input = ({ label, name, value, onChange, error, placeholder }) => {
     </div>
     {error && (
         <div>
-          <span> {error}</span>
+          <span className="input__error">{error}</span>
         </div>
       )}
     </div>
